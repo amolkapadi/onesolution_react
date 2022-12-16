@@ -61,14 +61,14 @@ function Select({ value, handleId, nodeId }) {
 function CustomNode({ id, data }) {
   return (
     <>
-      <div className="custom-node__header">
+      {/* <div className="custom-node__header">
         This is a <strong>custom node</strong>
       </div>
       <div className="custom-node__body">
         {Object.keys(data.selects).map((handleId) => (
           <Select key={handleId} nodeId={id} value={data.selects[handleId]} handleId={handleId} />
         ))}
-      </div>
+      </div> */}
     </>
   );
 }

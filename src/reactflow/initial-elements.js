@@ -6,27 +6,35 @@ export const nodes = [
     id: '1',
     type: 'input',
     data: {
-      label: 'Input Node',
+      label: 'Teams Meeting Flow',
     },
     position: { x: 250, y: 0 },
   },
   {
     id: '2',
     data: {
-      label: 'Default Node',
+      label: 'Voice Input',
     },
-    position: { x: 100, y: 100 },
+    position: { x: 350, y: 200 },
   },
+  
   {
     id: '3',
-    type: 'output',
     data: {
-      label: 'Output Node',
+      label: 'AI Process Modeller',
+    },
+    position: { x: 500, y: 0   },
+  },
+  {
+    id: '4',
+    type: 'Input',
+    data: {
+      label: 'Text Input',
     },
     position: { x: 400, y: 100 },
   },
   {
-    id: '4',
+    id: '5',
     type: 'custom',
     position: { x: 100, y: 200 },
     data: {
@@ -37,10 +45,10 @@ export const nodes = [
     },
   },
   {
-    id: '5',
-    type: 'output',
+    id: '6',
+    type: 'Output',
     data: {
-      label: 'custom style',
+      label: 'End',
     },
     className: 'circle',
     style: {
@@ -52,65 +60,94 @@ export const nodes = [
     targetPosition: Position.Left,
   },
   {
-    id: '6',
-    type: 'output',
+    id: '7',
+    type: 'Input',
     style: {
       background: '#63B3ED',
       color: 'white',
       width: 100,
     },
     data: {
-      label: 'Node',
+      label: 'Meeting Entry',
     },
     position: { x: 400, y: 325 },
     sourcePosition: Position.Right,
     targetPosition: Position.Left,
   },
+  ,
   {
-    id: '7',
-    type: 'default',
-    className: 'annotation',
-    data: {
-      label: (
-        <>
-          On the bottom left you see the <strong>Controls</strong> and the bottom right the{' '}
-          <strong>MiniMap</strong>. This is also just a node 🥳
-        </>
-      ),
+    id: '8',
+    type: 'Input',
+    style: {
+      background: '#63B3FF',
+      color: 'white',
+      width: 100,
     },
-    draggable: false,
-    selectable: false,
-    position: { x: 150, y: 400 },
+    data: {
+      label: 'Task Entry',
+    },
+    position: { x: 400, y: 325 },
+    sourcePosition: Position.Right,
+    targetPosition: Position.Left,
   },
+  ,
+  {
+    id: '9',
+    type: 'Input',
+    style: {
+      background: '#63B3EE',
+      color: 'white',
+      width: 100,
+    },
+    data: {
+      label: 'Timeshee Entry',
+    },
+    position: { x: 400, y: 325 },
+    sourcePosition: Position.Right,
+    targetPosition: Position.Left,
+  },
+  // {
+  //   id: '8',
+  //   type: 'default',
+  //   className: 'annotation',
+  //   data: {
+  //     label: (
+  //       <>
+  //         On the bottom left you see the <strong>Controls</strong> and the bottom right the{' '}
+  //         <strong>MiniMap</strong>. This is also just a node 🥳
+  //       </>
+  //     ),
+  //   },
+  //   draggable: false,
+  //   selectable: false,
+  //   position: { x: 150, y: 400 },
+  // },
 ];
 
 export const edges = [
-  { id: 'e1-2', source: '1', target: '2', label: 'this is an edge label' },
-  { id: 'e1-3', source: '1', target: '3', animated: true },
-  {
-    id: 'e4-5',
-    source: '4',
-    target: '5',
-    type: 'smoothstep',
-    sourceHandle: 'handle-0',
-    data: {
-      selectIndex: 0,
-    },
-    markerEnd: {
-      type: MarkerType.ArrowClosed,
-    },
-  },
-  {
-    id: 'e4-6',
-    source: '4',
-    target: '6',
-    type: 'smoothstep',
-    sourceHandle: 'handle-1',
-    data: {
-      selectIndex: 1,
-    },
-    markerEnd: {
-      type: MarkerType.ArrowClosed,
-    },
-  },
+  { id: 'e1-1', source: '1', target: '2', label: 'Voice Processing' },
+  { id: 'e1-2', source: '1', target: '4', label: 'Text Processing' },
+  { id: 'e1-3', source: '2', target: '3', animated: true },
+  { id: 'e1-4', source: '4', target: '3', animated: true },
+  { id: 'e1-5', source: '3', target: '7', animated: true },
+  { id: 'e1-6', source: '3', target: '8', animated: true },
+  { id: 'e1-7', source: '3', target: '9', animated: true },
+  { id: 'e1-8', source: '7', target: '6', animated: true },
+  { id: 'e1-9', source: '8', target: '6', animated: true },
+  { id: 'e1-10', source: '9', target: '6', animated: true },
+  
+  // },
+  // {
+  //   id: 'e4-6',
+  //   source: '4',
+  //   target: '6',
+  //   type: 'smoothstep',
+  //   sourceHandle: 'handle-1',
+  //   data: {
+  //     selectIndex: 1,
+  //   },
+  //   markerEnd: {
+  //     type: MarkerType.ArrowClosed,
+  //   },
+  // },
 ];

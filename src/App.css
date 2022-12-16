@@ -141,5 +141,27 @@
 
 .rect-flow-container{
     height: 500px;
-width: 100%;
+width: 50%;
+}
+
+
+/***bg**/
+.bg{
+    background: #00365F !important;
+    border-radius: 15px;
+}
+
+.btn-light{
+    border-radius: 15px;
+}
+
+.model-close{   
+    background: #D40B0B;
+    border-radius: 40px;
+}
+.model-save{
+    background: #30C36B;
+    border-radius: 40px;
+
+
 }

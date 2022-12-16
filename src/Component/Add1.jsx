@@ -1,8 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { ReactFlow } from "reactflow";
+import TemplateName from './TemplateName';
+
 import Side from "./Side";
+
 function Add1() {
     return (
-        <div className='container'>
+
+        <>
+         <div className='container'>
             <div className='row'>
                 <div className='col-md-2'>
                     <Side />
@@ -51,7 +58,7 @@ function Add1() {
                                 </div>
                             </div>
                             <div class="d-flex">
-                                    <button type="submit" class="btn btn-primary nextbtn ms-auto mt-3">Next</button>
+                                    <Link to="/Add2" type="submit" class="btn btn-primary nextbtn ms-auto mt-3" >Next</Link>
                                 </div>
 
                             
@@ -60,6 +67,13 @@ function Add1() {
                 </div>
             </div>
         </div>
+
+
+
+
+
+        </>
+       
     )
 }
 export default Add1;

@@ -11,7 +11,7 @@ function Reactflows(){
                     <Side />
                 </div>
                 <div className='col-md-10 '>
-                <TemplateName />
+                    <TemplateName />
                 </div>
             </div>
         </div>
